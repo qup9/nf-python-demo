@@ -16,7 +16,7 @@ process sayHello {
 }
 
 process processPython {
-  
+
   container = 'us-east1-docker.pkg.dev/longo-48734/pass/python3:latest'
 
   input: 
@@ -27,21 +27,21 @@ process processPython {
     """
     echo '$y world!'
     python3 --version
-    test.py 
+    test.py "./test" $y
     """
 }
 process processPython2 {
   container = 'us-east1-docker.pkg.dev/longo-48734/pass/python3:latest'
 
   input: 
-    val y
+    val x
   output:
     stdout
   script:
     """
-    echo '$y world!'
+    echo '$x world!'
     python3 --version
-    test2.py 
+    test2.py "XXX" $x
     """
 }
 
@@ -51,7 +51,7 @@ workflow {
     .of('foo', 'bar', 'cluster', 'frack') 
       | sayHello
       | processPython 
-      // | processPython2
+      | processPython2
       | view
 }
 
