@@ -24,3 +24,7 @@ sudo rm -R /home/q/work
 sudo ./nextflow run /home/q/nf-python-demo -profile gcp
 
 ## Nextflow Tower w/ Google Batch
+
+Compute environment: Google_Cloud_Batch
+Pipeline to launch: https://github.com/qup9/nf-python-demo (repo code url)
+Revision number: tower (this branch)
