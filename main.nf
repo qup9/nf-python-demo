@@ -49,8 +49,8 @@ workflow {
   Channel
     .of('foo', 'bar', 'cluster', 'frack') 
       | sayHello
-      | processPython 
-      | processPython2
+      // | processPython 
+      // | processPython2
       | view
 }
 
