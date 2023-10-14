@@ -11,7 +11,7 @@ process sayHello {
     stdout
   script:
     """
-    echo '$x world!'
+    echo '$x-world!'
     """
 }
 
@@ -34,14 +34,14 @@ process processPython2 {
   container = 'us-east1-docker.pkg.dev/longo-48734/pass/python3:latest'
 
   input: 
-    val x
+    val a
   output:
     stdout
   script:
     """
-    echo "$x world!"
+    echo "$a world!"
     python3 --version
-    test2.py 
+    test2.py "xxx" "./test2"
     """
 }
 

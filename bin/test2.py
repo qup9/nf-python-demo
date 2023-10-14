@@ -3,6 +3,7 @@
 
 import sys
 
+print("exec test2.py")
 arg1 = sys.argv[1]
 arg2 = sys.argv[2]
 
