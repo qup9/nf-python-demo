@@ -1,0 +1,14 @@
+#Available as ncbi/sra-tools
+# PRETTY_NAME="Alpine Linux v3.16"
+# package mangager apk
+FROM ubuntu:latest
+#
+# Add Basics
+ENV CONTAINER_NAME=python3(jpl)
+RUN apt-get update
+RUN apt-get -y full-upgrade 
+RUN apt-get -y install python3
+
+RUN python3 --version
+
+CMD ["/bin/bash"]
