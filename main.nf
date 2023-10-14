@@ -16,6 +16,7 @@ process sayHello {
 }
 
 process processPython {
+  
   container = 'us-east1-docker.pkg.dev/longo-48734/pass/python3:latest'
 
   input: 
@@ -49,7 +50,7 @@ workflow {
   Channel
     .of('foo', 'bar', 'cluster', 'frack') 
       | sayHello
-      // | processPython 
+      | processPython 
       // | processPython2
       | view
 }
