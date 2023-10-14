@@ -15,4 +15,4 @@ sudo rm -R /home/q/work
 ./nextflow run /home/q/nf-python-demo -profile local
 
 ## Docker
-./nextflow run /home/q/nf-python-demo -profile local
+./nextflow run /home/q/nf-python-demo -profile docker
