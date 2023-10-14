@@ -26,7 +26,7 @@ process processPython {
     """
     echo '$y world!'
     python3 --version
-    test.py ".\test" $y
+    test.py 
     """
 }
 process processPython2 {
