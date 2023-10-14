@@ -22,3 +22,5 @@ sudo rm -R /home/q/work
 
 *sudo is needed for nextflow process to be able to read $GOOGLE_APPLICATION_CREDENTIALS file.*
 sudo ./nextflow run /home/q/nf-python-demo -profile gcp
+
+## Nextflow Tower w/ Google Batch
