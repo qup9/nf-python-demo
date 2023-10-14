@@ -25,7 +25,7 @@ process processPython {
     stdout
   script:
     """
-    echo '$y world!'
+    echo "$y world!"
     python3 --version
     test.py "./test" $y
     """
@@ -39,9 +39,9 @@ process processPython2 {
     stdout
   script:
     """
-    echo '$x world!'
+    echo "$x world!"
     python3 --version
-    test2.py "XXX" $x
+    test2.py 
     """
 }
 
